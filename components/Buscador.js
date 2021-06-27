@@ -59,13 +59,21 @@ app.component('web-inicio', {
                     <hr>
                   </div>
 
-                  <div v-if="liDatos.registrado == 'no'">
-                    <iframe name="window" src="https://mibait.com/registro.html#movilidad" width="100%" height="900" marginwidth="0" scrolling="yes" frameborder="0"></iframe>
-                  </div>
-                  <div v-else>
-                    <iframe name="window" src="https://mibait.com/login.html#movilidad" width="100%" height="900" marginwidth="0" scrolling="yes" frameborder="0"></iframe>
-                  </div>
+                  <div style="overflow: auto;">
+                    <div style="display: inline-block;">
 
+                      <div v-if="liDatos.registrado == 'no'">
+                        <iframe name="window" src="https://mibait.com/registro.html#movilidad" style="width: 770px; height: 850px; overflow-y:hidden; overflow-x:scroll;"></iframe>
+                      </div>
+                      <div v-else>
+                        <iframe name="window" src="https://mibait.com/login.html#movilidad" style="width: 770px; height: 850px; overflow-y:hidden; overflow-x:scroll;">
+                        </iframe>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                  
 
                 </div>
               </div>
